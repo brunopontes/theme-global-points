@@ -1,0 +1,140 @@
+#primary-navigation {
+	background: $navBG;
+
+	@include respond-to(phone) {
+	}
+	@include respond-to(phoneL) {
+	}
+	@include respond-to(tablet) {
+	}
+	@include respond-to(miniTablet) {
+	}
+
+	.container {
+		@include respond-to(phone) {
+		}
+		@include respond-to(miniTablet) {
+		}
+	}
+
+	.menu-toggle {
+
+		@include respond-to(phone) {
+		}
+		@include respond-to(miniTablet) {
+		}
+
+		&:before {
+		}
+
+	}
+
+	.menu-container {
+
+		&.toggled-on {
+		}
+
+		@include respond-to(phone) {
+
+			&.toggled-on {
+			}
+		}
+		@include respond-to(miniTablet) {
+
+			&.toggled-on {
+			}
+		}
+	}
+
+	ul {
+		li {
+			border-bottom: 2px solid transparent;
+			border-right: 1px solid $navAllStoresArrowColor;
+			@include catIcons();
+
+			@include respond-to(phone) {
+			}
+			@include respond-to(miniTablet) {
+			}
+
+			&:first-child {
+				&:before {
+					background: $navAllStoresArrowColor;
+				}
+			}
+			&:last-child {
+			}
+
+			a {
+				color: $navLink;
+				@extend %regular-font;
+
+				@include respond-to(phone) {
+				}
+				@include respond-to(tablet) {
+				}
+				@include respond-to(desktop) {
+				}
+
+				&:hover {
+					color: $navLinkOver;
+				}
+			}
+
+			&:first-child {
+				background: $navAllStoresColor;
+				border-bottom-color: $navLinkOver;
+				color: $navLink;
+			}
+
+			ul {
+				background: $navSubmenuBG;
+				border-bottom: 6px solid $navLinkOver;
+
+				li {
+					border: 0;
+
+					&:first-child {
+						background: transparent;
+						border: none;
+					}
+					a {
+						@extend %regular-font;
+						color: $navSubmenuLink;
+
+						&:hover {
+							color: $navSubmenuLinkOver;
+						}
+					}
+				}
+			}
+
+			&:hover {
+				> a {
+					color: $navLinkOver;
+				}
+				&:before {
+					color: $navLinkOver;
+				}
+
+				ul {
+				}
+			}
+
+			&.active {
+		        a {
+		        }
+			}
+		}
+	}
+}
+#primary-navigation-clone {
+
+	.container {
+	}
+
+	@include respond-to(phone) {
+	}
+	@include respond-to(miniTablet) {
+	}
+}

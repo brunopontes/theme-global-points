@@ -1,0 +1,58 @@
+// CUSTOM VARIABLES
+
+$pageBG: #fff;
+$baseBG: #00243A;
+$blockBG: darken($pageBG, 5);
+
+$textBaseColor: #999;
+$textTitleColor: #00C4ED;
+$textDarkColor: #000;
+$textDisabledColor: lighten($textBaseColor, 10);
+
+$linkColor: #E44691;
+$linkColorOver: lighten($linkColor, 10);
+
+$mediaboxText: #fff;
+
+$headerLink: #fff;
+$headerLinkBG: $linkColor;
+
+$navBG: lighten($baseBG, 9);
+$navSubmenuBG: #fff;
+$navAllStoresColor: lighten($baseBG, 14);
+$navAllStoresArrowColor: lighten($baseBG, 11);
+$navLink: #fff;
+$navLinkOver: $textTitleColor;
+$navSubmenuLink: #666;
+$navSubmenuLinkOver: $linkColor;
+
+$footerSearchBG: $navBG;
+$footerAboutBG: lighten($baseBG, 5);
+$footerCopyrightBG: $baseBG;
+$footerText: #fff;
+$footerLink: $footerText;
+$footerLinkOver: $textTitleColor;
+
+$buttonLinkColor: lighten($baseBG, 5);
+$buttonLinkColorOver: lighten($baseBG, 10);
+$buttonSubmitColor: #fff;
+$buttonSubmitBGColor: $textTitleColor;
+$buttonSubmitColorOver: lighten($textTitleColor, 10);
+$buttonDisabledBGColor: #ccc;
+$buttonDisabledColorOver: lighten($buttonDisabledBGColor, 5);
+
+$sliderNavColor: $textBaseColor;
+$sliderArrowsColor: $linkColor;
+$sliderArrowsColorOver: $linkColorOver;
+
+$mediaboxArrowsColor: $buttonLinkColor;
+$mediaboxArrowsColorOver: $buttonLinkColorOver;
+
+$priceColor: $linkColor;
+$tagsColor: $textTitleColor;
+
+$formBGColor: #fff;
+$formDisabledBGColor: darken($formBGColor, 5);
+$formBorderColor: #ccc;
+$formError: #E44691;
+$formSuccess: #00C4ED;

@@ -1,0 +1,45 @@
+body.error {
+	background: image-url("bg.jpg") no-repeat center top;
+	background-size: cover;
+}
+
+
+/* CONTENT */
+#content {
+	.container {
+		body.error & {
+
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.box {
+		body.error & {
+			@include border-radius(0.35em);
+			background:$pageBG;
+
+			&:before {
+				background:$linkColor;
+				color: $pageBG;
+			}
+
+			.panel {
+				&:only-child {
+					a {
+						&.button {
+							&.back {
+								background: $buttonSubmitBGColor;
+
+								&:hover {
+									background: $buttonSubmitColorOver;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

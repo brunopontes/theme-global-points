@@ -1,0 +1,63 @@
+/* CONTENT */
+#content {
+	.container {
+		body.carrinho & {
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.cart {
+		form {
+			fieldset {
+				&.shippingCalc {
+					h2 {
+						color: $textTitleColor;
+					}
+				}
+			}
+		}
+		a.button {
+			background: $buttonSubmitBGColor;
+			color: $buttonSubmitColor;
+
+			&:hover {
+				background: $buttonSubmitColorOver;
+			}
+		}
+	}
+	&.cart-empty {
+		a {
+			&.back {
+				background: $buttonSubmitBGColor;
+				color: $buttonSubmitColor;
+
+				&:hover {
+					background: $buttonSubmitColorOver;
+				}
+			}
+		}
+	}
+	&.terms {
+		body.carrinho & {
+			header {
+				h1 {
+				}
+				h2 {
+					color: $textBaseColor;
+				}
+			}
+			.text {
+				@include border-radius(0.25em);
+
+				.scroll {
+
+					h1, h2, h3 {
+						color: $textBaseColor;
+					}
+				}
+			}
+		}
+	}
+}

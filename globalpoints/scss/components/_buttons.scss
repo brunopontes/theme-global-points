@@ -1,0 +1,101 @@
+.btn:hover {
+}
+
+a {
+	&.button, &.searchAddress, &.details {
+		@extend %bold-font;
+		background: $buttonLinkColor;
+		border: 0;
+		color: $buttonSubmitColor;
+//		@include border-radius(100%);
+		@include border-radius(2em);
+
+		&:hover {
+			background: $buttonLinkColorOver;
+		}
+	}
+	&.button {
+		&:before {
+		}		
+	}
+	&.details {
+
+	}
+	&.searchAddress {
+
+		@include respond-to(phone) {
+		}
+		@include respond-to(miniTablet) {
+		}
+
+		&:before {
+		}
+		&:hover {
+		}
+	}
+	&.back {
+
+		&:before {
+		}
+	}
+	&.rememberPassword {
+		color: $textBaseColor;
+
+		strong {
+			@extend %default-font;
+			color: $linkColor;
+		}
+	}
+	&.edit {
+		@include border-radius(0.5em);
+		background: $buttonSubmitBGColor;
+		color: $buttonSubmitColor;
+
+		&:hover {
+			background: $buttonSubmitColorOver;
+		}
+
+		&:before {
+
+		}
+	}
+	&.delete {
+		@include border-radius(0.5em);
+		background: $linkColor;
+		color: $buttonSubmitColor;
+
+		&:hover {
+			background: $linkColorOver;
+		}
+
+		&:before {
+		}
+	}
+}
+button.button {
+
+	&:before {
+	}
+
+	&:hover {
+	}
+
+	&:disabled, &[disabled], &[disabled='disabled'], &[readonly='readonly'] {
+
+		&:hover {
+		}
+	}
+}
+
+button[type='submit'], input[type='submit'] {
+	@extend %bold-font;
+	background: $buttonSubmitBGColor;
+	border: 0;
+	color: $buttonSubmitColor;
+	@include border-radius(2em);
+//	@include border-radius(0.25em);
+
+	&:hover {
+		background: $buttonSubmitColorOver;
+	}
+}

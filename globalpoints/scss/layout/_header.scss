@@ -1,0 +1,107 @@
+/* HEADER */
+.site-header {
+	background: $baseBG;
+
+	body.login &, body.error & {
+		background: transparent;
+	}
+
+	.container {
+	}
+
+	h1.logo {
+		a {
+			background: image-url("logo.png") no-repeat center center;
+			height: image-height("logo.png");
+			width: image-width("logo.png");
+
+			body.login &, body.error & {
+				background: image-url("logo-grd.png") no-repeat center center;
+				height: image-height("logo-grd.png");
+				width: image-width("logo-grd.png");
+			}
+		}
+	}
+
+	.search {
+		input[type='text'] {
+			@include border-right-radius(0);
+		}
+
+		button[type='submit'], input[type='submit'] {
+			@include border-radius(0.25em);
+			@include border-left-radius(0);
+		}
+	}
+
+	.profile {
+		h2, p {
+			@extend %default-font;
+			color: $headerLink;
+		}
+
+		p {
+			strong {
+				@extend %regular-font;
+				@include border-radius(0.5em);
+				background: $headerLinkBG;
+				display: inline-block;
+				padding: 0.25em 0.5em;
+			}
+		}
+
+		.text {
+			h2 {
+				span {
+					.over {
+						ul {
+							background: $navSubmenuBG;
+							border-bottom: 6px solid $navLinkOver;
+
+							&:after {
+								border-color: rgba($navSubmenuBG, 0);
+								border-bottom-color: $navSubmenuBG;
+							}
+
+							li {
+								border-right: 0;
+
+								&:first-child {
+									background: transparent;
+									border: none;
+								}
+								a {
+									@extend %regular-font;
+									color: $navSubmenuLink;
+
+									&:hover {
+										color: $navSubmenuLinkOver;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.cart-items {
+		a {
+			background: $headerLinkBG;
+			@include border-radius(0.5em);
+
+			&:hover {
+				background: $linkColorOver;
+			}
+
+			&:before {
+				color: $headerLink;
+			}
+
+			strong {
+				background:$baseBG;
+				color: $headerLink;
+			}
+		}
+	}
+}

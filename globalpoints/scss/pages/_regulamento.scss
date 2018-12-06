@@ -1,0 +1,17 @@
+/* CONTENT */
+#content {
+	.container {
+		body.regulamento & {
+
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.terms {
+		h2, h3 {
+			color: $textTitleColor;
+		}
+	}
+}

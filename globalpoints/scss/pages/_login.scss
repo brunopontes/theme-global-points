@@ -1,0 +1,34 @@
+/* CONTENT */
+#content {
+	.container {
+		body.login & {
+
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.box {
+		body.login & {
+			@include border-radius(0.35em);
+			background:$pageBG;
+
+			.panel {
+				&:only-child {
+					a {
+						&.button {
+							&.back {
+								background: $buttonSubmitBGColor;
+
+								&:hover {
+									background: $buttonSubmitColorOver;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

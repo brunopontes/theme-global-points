@@ -1,0 +1,111 @@
+/* CONTENT */
+#content {
+	.container {
+		body.minha-conta & {
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.pointsExpired {
+		.filters {
+			.field {
+				&:last-child {
+					button {
+						@include border-radius(0.25em);
+					}
+				}
+			}
+		}
+		table {
+			tbody {
+				tr {
+					&:nth-child(even) {
+						td {
+							background:$blockBG;
+						}
+					}
+					td {
+						&:first-child, &:nth-child(3), &:last-child, &:only-child {
+							@extend %bold-font;
+						}
+						&:nth-child(4), &:nth-child(5), &:last-child, &:only-child {
+							color: $linkColor;
+						}
+					}
+				}
+			}
+			tfoot {
+				tr {
+					td {
+						@extend %bold-font;
+						background:$blockBG;
+						text-align: right;
+
+						&:first-child {
+							color: $navBG;
+						}
+						&:last-child {
+							color: $linkColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.pointsSummary {
+		.filters {
+			.field {
+				&:last-child {
+					button {
+						@include border-radius(0.25em);
+					}
+				}
+			}
+		}
+		table {
+			tbody {
+				tr {
+					&:nth-child(even) {
+						td {
+							background:$blockBG;
+						}
+					}
+					td {
+						&:first-child, &:last-child, &:only-child {
+							@extend %bold-font;
+						}
+						&:last-child, &:only-child {
+							color: $linkColor;
+						}
+
+						a {
+							color: $textTitleColor;
+
+							&:hover {
+								color: $linkColorOver;
+							}
+						}
+					}
+				}
+			}
+			tfoot {
+				tr {
+					td {
+						@extend %bold-font;
+						background:$blockBG;
+						text-align: right;
+
+						&:first-child {
+							color: $navBG;
+						}
+						&:last-child {
+							color: $linkColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}

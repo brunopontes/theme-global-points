@@ -1,0 +1,56 @@
+/* CONTENT */
+#content {
+	.container {
+		body.cadastro & {
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.register {
+		a.button:last-child {
+			background: $buttonSubmitBGColor;
+			color: $buttonSubmitColor;
+
+			&:hover {
+				background: $buttonSubmitColorOver;
+			}
+		}
+
+		table {
+			tbody {
+				tr {
+					&:nth-child(even) {
+						td {
+							background:$blockBG;
+						}
+					}
+					td {
+						&:first-child {
+							@extend %bold-font;
+						}
+					}
+				}
+			}
+		}
+
+		fieldset {
+			&.profilePhoto {
+				button {
+					@extend %bold-font;
+					background: $buttonSubmitColor;
+					border: 1px solid $buttonSubmitBGColor;
+					color: $buttonSubmitBGColor;
+					@include border-radius(2em);
+					@include adjust-font-size-to(14px, 1/1);
+
+					&:hover {
+						background: $buttonSubmitColorOver;
+						color: $buttonSubmitColor;
+					}
+				}
+			}
+		}
+	}
+}

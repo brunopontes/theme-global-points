@@ -1,0 +1,72 @@
+// FOOTER
+
+footer {
+
+	.container {
+
+		h2 {
+			@extend %title-font;
+			color: $textTitleColor;
+		}
+
+		.search {
+			background: $footerSearchBG;
+
+			input[type='text'] {
+				@include border-right-radius(0);
+			}
+
+			button[type='submit'], input[type='submit'] {
+				@include border-radius(0.25em);
+				@include border-left-radius(0);
+			}
+		}
+
+		.about {
+			background: $footerAboutBG;
+
+			.help {
+				ul {
+					li {
+						a {
+							color: $footerLink;
+
+							&:hover {
+								color: $textTitleColor;
+							}
+						}
+					}
+				}
+			}
+			.support {
+				h3, p {
+					color: $footerText;
+				}
+			}
+		}
+
+		.copyright {
+			background: $footerCopyrightBG;
+
+			h1.logo {
+				background: image-url("logo.png") no-repeat center center;
+				height: image-height("logo.png");
+				width: image-width("logo.png");
+			}
+
+			p {
+				color: $textTitleColor;
+				@include opacity(0.3);
+			}
+
+			@include respond-to(phone) {
+			}
+			@include respond-to(phoneL) {
+			}
+			@include respond-to(tablet) {
+			}
+			@include respond-to(miniTablet) {
+			}
+		}
+	}
+}

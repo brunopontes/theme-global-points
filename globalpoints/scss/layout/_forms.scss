@@ -1,0 +1,203 @@
+@include placeholder {
+	color: $textDarkColor;
+	@include opacity(0.5);
+}
+
+fieldset {
+
+	header {
+	}
+}
+
+label {
+
+	&.inline {
+	}
+	.inline & {
+	}
+
+	&[for='login'], &[for='password'], &[for='rememberLogin'], &[for='rememberEmail'] {
+		@include border-left-radius(0.25em);
+	}
+
+}
+input, select, textarea {
+	@extend %default-font;
+	border: 0;
+	color: $textDarkColor;
+	@include border-radius(0.25em);
+	@include transition(.25s);
+
+	&:focus {
+	}
+
+	&[disabled='disabled'], &[readonly='readonly'] {
+
+		&:focus {
+		}
+	}
+	.inline & {
+	}
+
+	&.error, &.input-validation-error {
+	}
+}
+select {
+
+}
+input[type='text'], input[type='password'], input[type='date'], input[type='email'], textarea, select {
+	border: 1px solid $formBorderColor;
+}
+input[type=file] {
+}
+input[type=checkbox], input[type=radio] {
+}
+
+input[type=checkbox] {
+
+	& + label {
+	}
+
+	& + label:before, &:checked + label:before {
+		@include icons-sprite(checkbox);
+		content: '';
+		top:-9px;
+	}
+
+	&:checked + label, &:checked + label:before {
+	}
+
+	& + label:before {
+	}
+	&:checked + label:before {
+		@include icons-sprite(checkbox-checked);
+		content: '';
+	}
+}
+input[type=radio] {
+
+	& + label {
+	}
+
+	& + label:before {
+	}
+
+	&:checked + label, &:checked + label:before {
+	}
+
+	& + label:before {
+	}
+	&:checked + label:before {
+	}
+}
+textarea {
+}
+
+.required {
+	color: $linkColor;
+	@extend %bold-font;
+}
+.field-validation-error {
+
+	&:after, &:before {
+	}
+
+	&:after {
+	}
+	&:before {
+	}
+
+}
+
+p.attention {
+}
+
+.validation-summary-success {
+	border-bottom: 6px solid $formSuccess;
+
+//	p, ul {
+		&:before {
+			color: $formSuccess;
+		}
+//	}
+}
+.validation-summary-errors {
+	border-bottom: 6px solid $formError;
+
+//	p, ul {
+		&:before {
+			color: $formError;
+		}
+//	}
+}
+
+p.required, .alert {
+}
+.alert {
+
+	p {
+	}
+	a {
+
+		&:hover {
+		}
+	}
+}
+p.note {
+}
+.hidden {
+}
+
+// CHOSEN
+.chosen-container {
+	@include border-radius(0.25em);
+	border-color: $formBorderColor;
+
+	&.chosen-with-drop {
+		@include border-bottom-radius(0);
+	}
+
+	.chosen-drop {
+		border: 1px solid $formBorderColor;
+		border-top: 0;
+		@include border-bottom-radius(0.25em);
+	}
+	.chosen-results {
+		color: $textBaseColor;
+
+		li.highlighted {
+			background: $buttonSubmitBGColor;
+			color: $buttonSubmitColor;
+		}
+		li.result-selected {
+			background: $blockBG;
+			color: $textBaseColor;
+		}
+	}
+}
+.chosen-container-single{
+	.chosen-single {
+		@extend %default-font;
+		@include border-radius(0.25em);
+		color: $textBaseColor;
+
+		a {
+			color: $textBaseColor;
+		}
+		div {
+			background: $formBorderColor;
+		}
+		span {
+			color: $textDarkColor;
+		}
+	}
+}
+.chosen-container-active {
+	&.chosen-with-drop {
+		.chosen-single {
+			div {
+				background: $formBorderColor;
+			}
+		}
+	}
+}
