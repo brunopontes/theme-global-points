@@ -408,6 +408,19 @@ table thead th {
     color: #ffffff;
 }
 
+.steps ul li.active strong {
+    background-color: #004296;
+    background: #004296;
+}
+
+.ti-shopping-cart, .site-header .cart-items > a:before, article.cart-empty h2:before {
+    content: "\e6a0";
+}
+
+.cart-products table tbody tr td:last-child p strong {
+    color: #004296;
+}
+
 footer {
     display: none;
 }
