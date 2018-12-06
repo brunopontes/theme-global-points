@@ -36,6 +36,7 @@ a.button {
 
 aside.sidebar nav {
     background: #f2f2f2;
+    border-radius: 5px;
 }
 
 aside.sidebar .list-buttons ul li a {
@@ -221,19 +222,27 @@ article.product-description .tabs ul {
     color: #ffffff;
 }
 
-aside.sidebar + article.list-products ul.products li .photo {
+aside.sidebar + article.list-products ul.products li .photo, aside.sidebar + article + article + article.list-products ul.products li .photo, aside.sidebar + article + article.list-products ul.products li .photo, article.list-products ul.products li .photo {
     width: 100%;
     margin: 0;
     max-width: none;
 }
 
-    aside.sidebar + article.list-products ul.products li .photo a {
+    aside.sidebar + article.list-products ul.products li .photo a, aside.sidebar + article + article + article.list-products ul.products li .photo a, aside.sidebar + article + article.list-products ul.products li .photo a, article.list-products ul.products li .photo a {
         display: block;
     }
 
         aside.sidebar + article.list-products ul.products li .photo a:hover {
             box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 15px 0px;
         }
+
+aside.sidebar + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article + article + article.list-products .slider .flex-direction-nav, .slider .flex-direction-nav {
+    z-index: -1;
+}
+
+aside.sidebar + article + article + article.list-products .slider ul.products li img, aside.sidebar + article + article.list-products .slider ul.products li img, article.list-products ul.products li img {
+    margin-top: 35px;
+}
 
 .filters .orderBy select, .filters .pageItens select {
     border-radius: 5px;
@@ -266,16 +275,52 @@ aside.sidebar + article.list-products ul.products li .photo {
     padding-right: 4%;
 }
 
-article.list-products header {
+    .breadcrumbs ul li a {
+        color: #4a4a4a;
+    }
+
+    .breadcrumbs ul li:last-child a {
+        color: #004296;
+    }
+
+    .breadcrumbs ul li:before:nth-last-child(1) {
+        color: #004296;
+        background: #004296;
+        background-color: #004296;
+    }
+
+aside.sidebar .price-filter .field input {
+    border-radius: 5px;
+}
+
+aside.sidebar .list-category ul li a {
+    color: #4a4a4a;
+}
+
+    aside.sidebar .list-category ul li a:hover {
+        color: #ffa500;
+    }
+
+aside.sidebar .list-category ul li.active a {
+    color: #ffa500;
+    margin: 0;
+    padding: 0;
+}
+
+    aside.sidebar .list-category ul li.active a:before {
+        display: none;
+    }
+
+body.home article.list-products header {
     margin-bottom: 2em;
 }
 
-    article.list-products header h1 {
+    body.home article.list-products header h1 {
         margin-bottom: 2em;
         display: none;
     }
 
-    article.list-products header:after {
+    body.home article.list-products header:after {
         content: "CONFIRA OS PARCEIROS PARTICIPANTES";
         color: #004296;
         font-size: 1.875em;
@@ -284,6 +329,27 @@ article.list-products header {
         margin-left: -50px;
     }
 
+article.list-products header h1 {
+    text-transform: uppercase;
+}
+
+table thead th {
+    background-color: #004296;
+}
+
+.cart-products .remove {
+    color: #ccc;
+}
+
+.cart-products tfoot strong {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.cart .info {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
 
 
 footer {
