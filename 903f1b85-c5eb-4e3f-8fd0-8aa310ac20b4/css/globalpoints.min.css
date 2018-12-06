@@ -97,19 +97,23 @@ aside.sidebar .list-buttons ul li.active a {
                 color: #92d7ff;
             }
 
-            .site-header .profile .text h2 span .over {
-                background: #f2f2f2;
-                padding-top: 0;
-                text-align: left;
+            .site-header .profile .text h2 {
+                color: white;
             }
 
-                .site-header .profile .text h2 span .over ul li a {
-                    color: #4a4a4a;
+                .site-header .profile .text h2 span .over {
+                    background: #f2f2f2;
+                    padding-top: 0;
+                    text-align: left;
                 }
 
-                    .site-header .profile .text h2 span .over ul li a:hover {
-                        color: #ffa500;
+                    .site-header .profile .text h2 span .over ul li a {
+                        color: #4a4a4a;
                     }
+
+                        .site-header .profile .text h2 span .over ul li a:hover {
+                            color: #ffa500;
+                        }
 
     .site-header .cart-items {
         width: 20%;
@@ -122,6 +126,14 @@ aside.sidebar .list-buttons ul li.active a {
             color: #92d7ff;
             background: #012f6b;
         }
+
+#mediabox .nivo-nextNav {
+    display: none;
+}
+
+#mediabox .nivo-prevNav {
+    display: none;
+}
 
 #primary-navigation {
     float: unset;
@@ -362,12 +374,12 @@ footer {
 }
 
     #footer_custom_4 .pos-footer {
-        width: 80%;
+        width: 75%;
         margin: auto;
     }
 
         #footer_custom_4 .pos-footer .footer-contact a {
-            font-size: 13px;
+            font-size: 12px;
             padding: 0.3em;
             color: #004296;
         }
@@ -397,10 +409,11 @@ footer {
 
 
 .container-footer {
-    width: 80%;
+    width: 75%;
     margin: auto;
     text-align: center;
     display: table;
+    line-height: 15px;
 }
 
     .container-footer .pre-footer {
@@ -441,6 +454,7 @@ footer {
 .subtitle {
     font-size: 12px;
     color: #4a4a4a;
+    padding-top: 10px;
 }
 
 .point-most {
