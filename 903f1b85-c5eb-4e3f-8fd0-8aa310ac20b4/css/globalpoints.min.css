@@ -1,30 +1,15 @@
-﻿/*.site-header {
-    padding: 0;
-    margin: 0;
+﻿@font-face {
+    font-family: 'Montserrat Regular';
+    src: url(../assets/fonts/montserrat-v12-latin-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-v12-latin-regular.woff) format("woff")
 }
 
-    .site-header .container {
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .site-header .profile {
-        width: 100%;
-        float: left;
-        margin-right: 0;
-        margin-top: 0;
-        position: relative;
-        align-self: flex-start;
-        order: -1;
-        background: black;
-    }*/
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(../assets/fonts/montserrat-v12-latin-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-v12-latin-regular.woff) format("woff")
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Regular', sans-serif;
 }
 
 h1, h2, h3, a {
@@ -298,6 +283,54 @@ article.list-products header {
         font-weight: normal;
         margin-left: -50px;
     }
+
+
+
+footer {
+    display: none;
+}
+
+#footer_custom_4 {
+    display: block;
+    background: #f2f2f2;
+}
+
+.container-footer {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+    .container-footer .pre-header h1 {
+        font-weight: 800;
+    }
+
+    .container-footer .pre-header div {
+        color: #004296;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .container-footer .section1 h2, .section2 h2, .section3 h2 {
+        padding-top: 35px;
+        margin: 0;
+        font-weight: 600;
+    }
+
+.section1, .section2, .section3 {
+    width: 33.33%;
+    float: left;
+    padding: 1%;
+}
+
+.footer-phone {
+    font-size: 25px;
+    color: #f16122;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+
 /*************/
 /*Responsives*/
 @media only screen and (min-width: 1280px) {
