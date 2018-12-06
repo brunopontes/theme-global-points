@@ -27,7 +27,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
+h1, h2, h3, a {
     color: #004296
 }
 
@@ -176,7 +176,7 @@ article {
 
     article.list-products ul.products li {
         border-style: solid;
-        border-color: #8e8e8e;
+        border-color: #bfbebe;
         border-width: 1px;
         width: inherit;
     }
@@ -211,6 +211,93 @@ article.product-description .tabs ul {
 .popOver {
     display: none;
 }
+
+
+.filters .viewType ul li {
+    background: #ccc;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+
+    .filters .viewType ul li.active {
+        background: #004296;
+        color: #ffffff;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .filters .viewType ul li a {
+        border-radius: 5px;
+        border: none;
+    }
+
+.viewType ul li a.listView:before, .viewType ul li a.gridView:before {
+    color: #ffffff;
+}
+
+aside.sidebar + article.list-products ul.products li .photo {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+}
+
+    aside.sidebar + article.list-products ul.products li .photo a {
+        display: block;
+    }
+
+        aside.sidebar + article.list-products ul.products li .photo a:hover {
+            box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 15px 0px;
+        }
+
+.filters .orderBy select, .filters .pageItens select {
+    border-radius: 5px;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: 100% 0;
+    background-size: 5px 5px, 5px 5px, 3em 3.5em;
+    background-repeat: no-repeat;
+}
+
+    .filters .orderBy select.orderBy:after, .filters .pageItens select:before {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .filters .orderBy select:focus, .filters .pageItens select:focus {
+        background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+        background-size: 5px 5px, 5px 5px, 3em 3.5em;
+        background-repeat: no-repeat;
+        border-color: grey;
+        outline: 0;
+    }
+
+.breadcrumbs, section#content {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+article.list-products header {
+    margin-bottom: 2em;
+}
+
+    article.list-products header h1 {
+        margin-bottom: 2em;
+        display: none;
+    }
+
+    article.list-products header:after {
+        content: "CONFIRA OS PARCEIROS PARTICIPANTES";
+        color: #004296;
+        font-size: 1.875em;
+        line-height: 1.2em;
+        font-weight: normal;
+        margin-left: -50px;
+    }
 /*************/
 /*Responsives*/
 @media only screen and (min-width: 1280px) {
