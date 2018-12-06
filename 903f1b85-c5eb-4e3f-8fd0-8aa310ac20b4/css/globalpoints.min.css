@@ -375,43 +375,45 @@ footer {
 }
 
     #footer_custom_4 .pos-footer {
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
 
         #footer_custom_4 .pos-footer .footer-contact a {
-            font-size: 14px;
-            padding: 1%;
+            font-size: 13px;
+            padding: 0.3em;
             color: #004296;
         }
 
         #footer_custom_4 .pos-footer .link-caixa {
-            margin-top: 18px;
+            margin-top: 10px;
             border-bottom-style: solid;
             border-bottom-width: 1px;
         }
 
             #footer_custom_4 .pos-footer .link-caixa a {
                 display: block;
-                font-size: 25px;
+                font-size: 18px;
                 padding-left: 1%;
                 color: #004296;
                 font-weight: 700;
-                margin-bottom: 25px;
+                margin-bottom: 10px;
             }
 
         #footer_custom_4 .pos-footer .footer-copyright div {
-            margin-top: 35px;
+            margin-top: 10px;
             margin-bottom: 50px;
             padding: 1%;
-            font-size: 12px;
+            font-size: 11px;
+            line-height: 15px;
         }
 
 
 .container-footer {
-    width: 90%;
+    width: 80%;
     margin: auto;
     text-align: center;
+    display: table;
 }
 
     .container-footer .pre-footer {
@@ -420,19 +422,20 @@ footer {
 
         .container-footer .pre-footer h1 {
             font-weight: 800;
+            font-size: 22px;
         }
 
         .container-footer .pre-footer div {
             color: #004296;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
         }
 
     .container-footer .section1 h2, .section2 h2, .section3 h2 {
         padding-top: 35px;
         margin: 0;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 15px;
     }
 
 .section1, .section2, .section3 {
