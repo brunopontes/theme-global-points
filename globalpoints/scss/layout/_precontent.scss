@@ -1,0 +1,90 @@
+/* MEDIABOX */
+#mediabox {
+
+	.nivoSlider {
+
+		@include respond-to(phone) {
+		}
+		@include respond-to(tablet) {
+		}
+		@include respond-to(miniTablet) {
+		}
+		a.nivo-imageLink {
+		}
+	}
+	.nivo-caption {
+		background: transparent;
+		bottom: auto;
+		@include opacity(1);
+		position: absolute;
+		left: auto;
+		right: 2em;
+		text-align: right;
+		bottom: 15%;
+		width: 540px;
+
+		@include respond-to(phone) {
+		}
+		@include respond-to(miniTablet) {
+		}
+
+		h1 {
+			@extend %regular-font;
+			color: $mediaboxText;
+			@include adjust-font-size-to(45px, 2/1);
+			margin-bottom: 0.25em;
+
+			@include respond-to(phone) {
+			}
+			@include respond-to(tablet) {
+			}
+			@include respond-to(miniTablet) {
+			}
+			@include respond-to(desktop) {
+			}
+
+			span {
+				&.blue {
+					@extend %bold-font;
+					color: $textTitleColor;
+				}
+				&.pink {
+					@extend %default-font;
+					color: $linkColor;
+				}
+			}
+		}
+		h2 {
+			@extend %default-font;
+			color: $mediaboxText;
+			@include adjust-font-size-to(36px, 1.65/1);
+
+			@include respond-to(phone) {
+			}
+			@include respond-to(tablet) {
+			}
+			@include respond-to(miniTablet) {
+			}
+			@include respond-to(desktop) {
+			}
+		}
+	}
+	.nivo-directionNav {
+		a {
+			@include border-radius(100%);
+
+			&.nivo-prevNav, &.nivo-nextNav {
+				background: $buttonLinkColor;
+
+				&:before {
+					color: $buttonSubmitColor;
+				}
+			}
+			&:hover {
+				&.nivo-prevNav, &.nivo-nextNav {
+					background: $buttonLinkColorOver;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@include font-face("ProximaNovaBold", font-files("proximanova-bold-webfont.woff", "proximanova-bold-webfont.ttf", "proximanova-bold-webfont.svg"), "proximanova-bold-webfont.eot");
+@include font-face("ProximaNovaLight", font-files("proximanova-light-webfont.woff", "proximanova-light-webfont.ttf", "proximanova-light-webfont.svg"), "proximanova-light-webfont.eot");
+@include font-face("ProximaNovaRegular", font-files("proximanova-regular-webfont.woff", "proximanova-regular-webfont.ttf", "proximanova-regular-webfont.svg"), "proximanova-regular-webfont.eot");
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+// FONTS VARIABLES
+%default-font {
+	font-family: "ProximaNovaLight", Helvetica, sans-serif;
+	font-weight: normal;
+}
+%regular-font {
+	font-family: "ProximaNovaRegular", Helvetica, sans-serif;
+	font-weight: normal;
+}
+%bold-font{
+	font-family: "ProximaNovaBold", Helvetica, sans-serif;
+	font-weight: normal;
+}
+%title-font{
+	font-family: "ProximaNovaBold", Helvetica, sans-serif;
+	font-weight: normal;
+}

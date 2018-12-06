@@ -1,0 +1,106 @@
+// MIXN RGBA
+@mixin transparent($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: $color;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+// MIXIN FONT SMOOTHING
+@mixin font-smoothing($value: antialiased) {
+	@if $value == antialiased {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+// MIXIN MENU
+@mixin navMenu() {
+	@each $item in home, como-participar, regulamento, catalogo, galeria, viagem-final, ganhadores {
+		&.#{$item} {
+			body.#{$item} & {
+				a {
+					color: $lightYellow;
+				}
+			}
+		}
+	}
+}
+
+// MIXIN CATEGORIES ICONS
+@mixin catIcons() {
+	@each $item in celulares, eletrodomesticos, tv-e-video, informatica, eletroportateis, esporte-e-lazer {
+		&.cat-#{$item} {
+			a {
+				&:before {
+					@include icons-sprite(cat-#{$item});
+
+				}
+			}
+			&:hover {
+				a {
+					&:before {
+						@include icons-sprite(cat-#{$item}_over);
+					}
+				}
+			}
+		}
+	}
+}
+
+// MIXIN SIDEBAR CATEGORIES ICONS
+@mixin sidebarCatIcons() {
+	@each $item in celulares, eletrodomesticos, tv-e-video, informatica, eletroportateis, esporte-e-lazer {
+		&.cat-#{$item} {
+			a {
+				&:before {
+					@include icons-sprite(cat-#{$item}_over);
+				}
+			}
+		}
+	}
+}
+
+// MIXIN RESPONSIVO - ALTERNATIVA AO BREAKPOINT
+@mixin respond-to($media) {
+	@if $media == phone {
+		@media only screen and (max-width: 599px) { @content; }
+	}
+	@if $media == phoneP {
+		@media only screen and (max-width: 599px) and (orientation: portrait) { @content; }
+	}
+	@if $media == phoneL {
+		@media only screen and (max-width: 599px) and (orientation: landscape) { @content; }
+	}
+	@else if $media == miniTablet {
+		@media only screen and (min-width: 600px) and (max-width: 699px) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: 600px) and (max-width: 900px) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: 901px) and (max-width: 1129px)  { @content; }
+	}
+	@else if $media == widedesktop {
+		@media only screen and (min-width: 1130px) { @content; }
+	}
+}
+
+// MIXIN BACKGROUND SIZE
+@mixin ie-background-size() {
+	-ms-behavior: url(/assets/js/backgroundsize.min.htc);
+}
+
+// MIXIN PLACEHOLDER
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}  
+}

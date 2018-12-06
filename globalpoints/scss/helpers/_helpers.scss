@@ -1,0 +1,1108 @@
+html, body {
+//	height:100%;
+
+	&.ie9 {
+		&.fancybox-lock {
+		}
+		&.fancybox-margin {
+		}
+	}
+}
+body {
+	@extend %default-font;
+	background: $pageBG;
+	color: $textBaseColor;
+
+	&.ie9 {
+	}
+}
+a {
+	color:$linkColor;
+
+	&:hover, &.over {
+		color: lighten($linkColor, 10);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend %title-font;
+	color: $textBaseColor;
+}
+h1 {
+	color: $textTitleColor;
+
+	@include respond-to(phone) {
+	}
+	@include respond-to(miniTablet) {
+	}
+}
+h2 {
+	@include respond-to(phone) {
+	}
+}
+h3 {
+}
+p {
+}
+
+strong {
+	@extend %bold-font;
+}
+
+// IMG REPLACEMENT
+%img-replace {
+	display: inline-block;
+	overflow: hidden;
+	text-align:center;
+	text-indent: -3000em;
+	vertical-align: middle;
+}
+// TEXT HIDE
+%hide-text {
+	overflow: hidden;
+	text-indent: -3000em;
+
+	&:before {
+		display: inline-block;
+		float: right;
+		margin-left: 1.2em;
+		margin-right: 0.4em;
+		margin-top: 0.25em;
+		text-align: right;
+		vertical-align: middle;
+	}
+}
+
+// IMAGE BLOCK FOR BEFORE OR AFTER 
+%block-img {
+	content: '';
+	clear: both;
+	display: block;
+	margin: 0 auto 0.25em auto;
+	vertical-align: middle;
+}
+
+// PAGE
+#page {
+}
+
+.container {
+}
+
+// SECTION
+section {
+
+	&#content {
+
+		@include respond-to(phone) {
+		}
+		@include respond-to(tablet) {
+		}
+		@include respond-to(miniTablet) {
+		}
+
+		.container {
+		}
+	}
+}
+
+// ARTICLE
+article {
+
+	header {
+	}
+}
+
+// SIDEBAR
+aside {
+	&.sidebar {
+
+		a.button {
+			&.back {
+				background: $linkColor;
+
+				&:hover {
+					background: $linkColorOver;
+				}
+			}
+		}
+
+		.banner {
+			@include border-radius(0.5em);
+		}
+
+		nav {
+			@include border-radius(0.5em);
+			overflow: hidden;
+		}
+
+		h2 {
+			@include adjust-font-size-to(18px, 1/1);
+			color: $textTitleColor;
+
+			a {
+				color: $textTitleColor;
+
+				&:hover {
+					color: $textTitleColor;
+				}
+			}
+		}
+
+		+ article {
+		}
+
+		.price-filter {
+		}
+
+		header, .price-filter, .list-category, .list-colors {
+		}
+
+		header {
+			h1 {
+				@include adjust-font-size-to(20px, 1/1);
+				@include sidebarCatIcons();
+
+				a {
+					color: $textTitleColor;
+				}
+			}
+		}
+
+		.list-category {
+			ul {
+				li {
+					a {
+						color: $textBaseColor;
+
+						&:hover {
+							color: $linkColor;
+						}
+					}
+					&.active {
+						a {
+							background: $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+							@include border-radius(0.5em);
+						}
+					}
+				}
+			}
+		}
+		.list-colors {
+			ul {
+				li {
+					a {
+						border: 1px solid $textBaseColor;
+
+						&:hover {
+							border-color: $linkColor;
+						}
+					}
+					&.active {
+						a {
+							border-color: $buttonSubmitBGColor;
+
+							&:after {
+								border-color: rgba($buttonSubmitBGColor, 0);
+								border-top-color: $buttonSubmitBGColor;
+							}
+						}
+					}
+				}
+			}
+		}
+		.list-cart {
+			p {
+				@extend %regular-font;
+			}
+		}
+		.list-cart-total {
+			p {
+				@extend %regular-font;
+
+				strong {
+					color: $linkColor;
+				}
+			}
+		}
+		.list-buttons {
+			ul {
+				li {
+					a {
+						@extend %bold-font;
+						border: 1px solid $formBorderColor;
+						color: $formBorderColor;
+						@include border-radius(0.25em);
+
+						&:hover {
+							background: $buttonSubmitBGColor;
+							border: 1px solid $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+						}
+					}
+					&.active {
+						a {
+							background: $buttonSubmitBGColor;
+							border: 1px solid $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// PRODUCTS LIST
+article {
+	&.list-products {
+		ul {
+			&.products {
+				li {
+					h2 {
+						a {
+							@extend %regular-font;
+							color: $textDarkColor;
+
+							&:hover {
+								color: $linkColor;
+							}
+						}
+					}
+					.tag {
+						@include border-radius(2em);
+						@extend %bold-font;
+
+						&.new, &.sale, &.shipping {
+							background: $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+						}
+					}
+					p {
+						&.price {
+							strong {
+								color: $linkColor;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}	
+
+// BANNERS LIST
+article {
+	&.list-banners {
+		background: $blockBG;
+
+		ul {
+			&.banners {
+				li {
+					@include border-radius(0.5em);
+					overflow: hidden;
+				}
+			}
+		}
+	}
+}
+
+// POPOVER
+.popOver {
+	.variable {
+		&:nth-child(2) {
+			ul {
+				li {
+					p {
+						@extend %default-font;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			ul {
+				li {
+					p {
+						@extend %bold-font;
+					}
+				}
+			}
+		}
+	}
+	.tag {
+		@include border-radius(2em);
+		@extend %bold-font;
+
+		&.new, &.sale, &.shipping {
+			background: $buttonSubmitBGColor;
+			color: $buttonSubmitColor;
+		}
+	}
+	h2 {
+		a {
+			@extend %regular-font;
+			color: $textDarkColor;
+
+			&:hover {
+				color: $linkColor;
+			}
+		}
+	}
+	p {
+		&.price {
+			strong {
+				color: $linkColor;
+			}
+		}
+	}
+}
+
+// FILTERS
+.filters {
+	.viewType {
+		ul {
+			li {
+				a {
+					background: $formBorderColor;
+					border: 0;
+					@include border-radius(0.25em);
+					color: $buttonSubmitColor;
+
+					&:hover {
+						background: $linkColorOver;
+					}
+				}
+				&.active {
+					a {
+						background: $linkColor;
+						color: $buttonSubmitColor;
+
+						&:hover {
+							background: $linkColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// FLEXSLIDER
+.slider {
+	.flex-control-nav {
+		@include inline-block-list(0.25em);
+		text-align: center;
+
+		li {
+			a {
+				background: $textBaseColor;
+				border: 2px solid $textBaseColor;
+
+				&.flex-active {
+					background: transparent;
+				}
+			}
+		}
+	}
+	.flex-direction-nav {
+		li {
+			a {
+				@include border-radius(100%);
+
+				&.flex-prev, &.flex-next {
+					background: $linkColor;
+
+					&:before {
+						color: $buttonSubmitColor;
+					}
+				}
+				&:hover {
+					&.flex-prev, &.flex-next {
+						background: $linkColorOver;
+					}
+				}
+			}
+		}
+	}
+}
+
+// PRODUCT DETAILS
+.product-details {
+	.gallery {
+
+		+ .photo {
+		}
+
+		ul {
+
+			li {
+				@include transition(.25s);
+
+				&.cycle-sentinel {
+				}
+
+				a {
+					img {
+						border-color: $formBorderColor;
+					}
+					&.active {
+						img {
+							border-color: $buttonSubmitBGColor;
+						}
+					}
+					&:hover {
+						img {
+							border-color: $buttonSubmitBGColor;
+						}
+					}
+				}
+			}
+		}
+		.controlNav {
+			.prev, .next {
+
+				&:before {
+				}
+
+				&.disabled {
+
+					&:hover {
+					}
+				}
+			}
+			.prev {
+				&:before {
+				}
+			}
+			.next {
+				&:before {
+				}
+			}
+		}
+	}
+	.photo {
+
+		img {
+		}
+	}
+	.product-info {
+
+		.tag {
+			@include border-radius(2em);
+			@extend %bold-font;
+
+			&.new, &.sale, &.shipping {
+				background: $buttonSubmitBGColor;
+				color: $buttonSubmitColor;
+			}
+		}
+		h1, p {
+		}
+		h1 {
+		}
+
+		form {
+
+			fieldset {
+
+				&:only-child {
+					.alert-stock {
+						background: $blockBG;
+						@include border-radius(0.5em);
+
+						h2 {
+							@extend %bold-font;
+							color: $textTitleColor;
+						}
+						p {
+							strong {
+								color: $textDarkColor;
+							}
+						}
+					}
+				}
+
+				&:nth-child(2n) {
+				}
+
+				h2 {
+					@extend %regular-font;
+					color: $textDarkColor;
+				}
+
+				.variable {
+
+					&:only-child {
+					}
+
+					&.quantity {
+						.more, .less {
+							@extend %bold-font;
+							background: $formBorderColor;
+							color: $buttonSubmitColor;
+						}
+					}
+
+					&.colors {
+
+						ul {
+
+							li {
+
+								input[type='radio'] {
+									display: block;
+									position: absolute;
+									visibility: hidden;
+								}
+
+								label {
+									border: 1px solid $textBaseColor;
+
+									&:before {
+										display: none;
+									}
+
+									&:hover {
+										border-color: $linkColor;
+									}
+								}
+								input {
+									&:checked {
+										+ label {
+											border-color: $buttonSubmitBGColor;
+
+											&:after {
+												border-color: rgba($buttonSubmitBGColor, 0);
+												border-top-color: $buttonSubmitBGColor;
+											}
+										}
+									}
+								}
+
+								img {
+								}
+							}
+						}
+					}
+				}
+				.extras {
+
+					a {
+						color: $textDarkColor;
+
+						&:hover {
+							color: $linkColor;
+						}
+
+						&.button {
+							background: $buttonDisabledBGColor;
+							color: $buttonSubmitColor;
+
+							&:hover {
+								background: $buttonDisabledColorOver;
+							}
+						}
+					}
+				}
+				.sendToCart {
+
+					button[type='submit'], input[type='submit'] {
+						background: $linkColor;
+
+						&:hover {
+							background: $linkColorOver;
+						}
+					}
+					a.button {
+					}
+					p {
+						color: $textTitleColor;
+
+						strong, span.tooltip {
+							color: $textTitleColor;
+						}
+					}
+				}
+				.shippingCalc {
+					.other {
+						input {
+						}
+						button {
+							@include border-right-radius(0.25em);
+							background: $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+						}
+					}
+					.result {
+						p {
+							strong {
+								color: $linkColor;
+							}
+						}
+					}
+				}
+			}
+
+			.price {
+				p {
+					strong {
+						color: $linkColor;
+					}
+				}
+			}
+			.field {
+			}
+		}
+	}
+}
+
+// TABS
+.tabs {
+	ul {
+		@include respond-to (phone) {
+		}
+		@include respond-to (phoneP) {
+		}
+
+		li {
+
+			a {
+				@extend %bold-font;
+				@include border-radius(0.25em);
+				border-color: $buttonDisabledBGColor;
+				color: $buttonDisabledBGColor;
+
+				@include respond-to (phone) {
+				}
+
+				&:hover {
+				}
+			}
+
+			&.active {
+				a {
+					background: $buttonSubmitBGColor;
+					border: $buttonSubmitBGColor;
+					color: $buttonSubmitColor;
+
+					&:after {
+						border-top-color: $buttonSubmitBGColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+// BREADCRUMBS 
+.breadcrumbs {
+	ul {
+
+		li {
+			@extend %bold-font;
+			color: $textTitleColor;
+
+			&:before {
+				color: $textBaseColor;
+			}
+
+			a {
+				color: $textBaseColor;
+
+				&:hover {
+					color: $linkColor;
+				}
+			}
+		}
+	}
+	+ #mediabox {
+		.nivoSlider {
+			.nivo-caption {
+				border-bottom: 6px solid $linkColor;
+
+				h2 {
+					@extend %regular-font;
+					color: $textDarkColor;
+				}
+				.tag {
+					@include border-radius(2em);
+					@extend %bold-font;
+
+					&.new, &.sale, &.shipping {
+						background: $buttonSubmitBGColor;
+						color: $buttonSubmitColor;
+					}
+				}
+				p {
+					color: $textBaseColor;
+
+					&.price {
+						strong {
+							color: $linkColor;
+						}
+					}
+				}
+			}
+		}
+		.nivo-controlNav {
+			a {
+				border-color: $buttonLinkColor;
+
+				&.active {
+					background: $buttonLinkColor;
+				}
+			}
+		}
+	}
+}
+
+// STEPS 
+.steps {
+	ul {
+		li {
+			@extend %bold-font;
+			color: $textDisabledColor;
+
+			&:last-child {
+			}
+
+			strong {
+				background: $textDisabledColor;
+			}
+
+			&.active {
+				color: $buttonSubmitBGColor;
+
+				strong {
+					background: $buttonSubmitBGColor;
+					color: $buttonSubmitColor;
+				}
+			}
+		}
+	}
+}
+
+// CART PRODUCTS TABLE
+.cart-products {
+	.shippingDate, .partnerError {
+		color: $linkColor;
+	}
+
+	&.failed {
+		h2 {
+			color: $textTitleColor;
+		}
+	}
+
+	table {
+		tbody {
+			tr {
+				td {
+					&:last-child {
+						color: $linkColor;
+					}
+					.partner {
+					}
+
+					.photo {
+
+						img {
+						}
+					}
+					.product {
+						h2 {
+							@extend %regular-font;
+							color: $navBG;
+						}
+						p {
+						}
+					}
+
+					.quantity {
+						.field {
+						}
+						.quantityController {
+						}
+						.more, .less {
+							@extend %bold-font;
+							background: $formBorderColor;
+							color: $buttonSubmitColor;
+						}
+						.less {
+						}
+					}
+					a.remove {
+						color: $textBaseColor;
+
+						&:hover {
+							color: $linkColor;
+						}
+					}
+				}
+			}
+		}
+		tfoot {
+			tr {
+				td {
+					p {
+						color: $navBG;
+					}
+					table {
+						&.subtotal {
+							tr {
+								td {
+									@extend %bold-font;
+
+									&:first-child {
+										color: $navBG;
+									}
+									&:last-child {
+										color: $linkColor;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.cart-discount {
+	tbody {
+		tr {
+			td {
+				p {
+					color: $navBG;
+				}
+				&:first-child {
+					.field {
+						input {
+						}
+						button {
+							@include border-right-radius(0.25em);
+							background: $buttonSubmitBGColor;
+							color: $buttonSubmitColor;
+						}
+					}
+				}
+				&:last-child {
+					p {
+						color: $navBG;
+						margin-bottom: 0;
+					}
+					table {
+						&.subtotal {
+							tr {
+								td {
+									@extend %bold-font;
+
+									&:first-child {
+										color: $navBG;
+									}
+									&:last-child {
+										color: $textBaseColor;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.cart-total {
+	h2 {
+	}
+	table {
+		tr {
+			td {
+				@extend %bold-font;
+
+				&:first-child {
+					color: $navBG;
+				}
+				&:last-child {
+					color: $linkColor;
+				}
+			}
+		}
+	}
+}
+
+// ORDER INFO
+.order-info {
+	.box {
+		@include border-radius(0.5em);
+		border-color: $formBorderColor;
+
+		.buyer, .address {
+		}
+		.recipient {
+		}
+
+		h3 {
+			color: $textDarkColor;
+		}
+		p {
+		}
+	}
+}
+
+// ANTI SPAM EMAIL ALERT
+.email-alert {
+	background: $navBG;
+	@include border-radius(0.5em);
+
+	h2 {
+		color: $textTitleColor;
+	}
+
+	p {
+		color: $navSubmenuBG;
+	}
+}
+
+/* PASSWORD FORCE */
+.passwordForce {
+	&:before {
+	}
+}
+
+// PAGINATION 
+.pagination {
+	ul {
+		li {
+			@include border-radius(0.5em);
+
+			a {
+				color: $textBaseColor;
+
+				&:hover {
+					background: $linkColorOver;
+					color: $buttonSubmitColor;
+				}
+			}
+
+			&.disabled {
+				a {
+					color: $textBaseColor !important;
+
+					&:hover {
+						color: $textBaseColor !important;
+					}
+				}
+			}
+
+			&.active {
+				a {
+					background: $linkColor;
+					color: $buttonSubmitColor;
+
+					&:hover {
+						background: $linkColor;
+					}
+				}
+			}
+
+			&.previous, &.next {
+				a {
+					background: $formBorderColor;
+					color: $buttonSubmitColor;
+
+					&:hover {
+						background: $linkColorOver;
+					}
+				}
+			}
+
+			&.previous {
+			}
+			&.next {
+			} 
+		}
+	}
+}
+
+// TABLE
+table {
+	thead {
+		th {
+			@extend %bold-font;
+			background: $navBG;
+			color: $navSubmenuBG;
+		}
+	}
+	tbody {
+		tr {
+			td {
+				border-color: $blockBG;
+			}
+		}
+	}
+}
+
+// LOARDER
+#divLoader{
+}
+.bg-loader{
+}
+.loading{
+
+	.loader-animation {
+	}
+}
+
+// TOOLTIPSTER
+.tooltipster-shadow {
+}
+.tooltipster-shadow .tooltipster-content {
+	background: darken($pageBG, 10);
+	border-bottom: 6px solid $formError;
+}
+.tooltipster-shadow .tooltipster-arrow-top-right.tooltipster-arrow {
+	span {
+		border-top-color: $formError !important;
+	}
+}
+.tooltipster-shadow .tooltipster-arrow-top-right.tooltipster-arrow {
+	span {
+		border-top-color: $formError !important;
+	}
+}
+.tooltipster-shadow .tooltipster-arrow-bottom-right.tooltipster-arrow {
+	span {
+		border-bottom-color: $formError !important;
+	}
+}
+.tooltipster-default-shadow .tooltipster-content {
+	background: darken($pageBG, 10);
+	border-bottom: 6px solid $formSuccess;
+}
+.tooltipster-default-shadow .tooltipster-arrow {
+	span {
+		border-top-color: $formSuccess !important;
+	}
+}
+
+// FANCYBOX
+.fancybox-overlay {
+	@include transparent($pageBG, 0.8)
+}
+.fancybox-opened .fancybox-skin {
+	background: $pageBG;
+	@include box-shadow(0 0 25px rgba($textDarkColor, 0.5));
+}
+#fancybox-loading, .fancybox-close {
+	background: none;
+}
+.fancybox-prev, .fancybox-next {
+	&:hover {
+		span {
+			@include transition(.25s);
+			color: lighten($linkColor, 10);
+		}
+	}
+}

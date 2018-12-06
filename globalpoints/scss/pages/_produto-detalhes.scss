@@ -1,0 +1,34 @@
+/* CONTENT */
+#content {
+	.container {
+		body.produto-detalhes & {
+		}
+	}
+}
+
+/* ARTICLE */
+article {
+	&.product-description {
+		.tabs {
+			ul {
+				background: $blockBG;
+			}
+
+			table {
+				th {
+					@extend %bold-font;
+					color: $textDarkColor;
+				}
+
+				tr {
+					&:nth-child(even) {
+						th, td {
+							background: $blockBG;
+							border-color: $blockBG;
+						}
+					}
+				}
+			}
+		}
+	}
+}
