@@ -293,10 +293,9 @@ body.home .products .photo {
     margin-top: 35px;
 }
 
-select option, .chosen-container .chosen-results li.highlighted {
-    background-color: #ffffff;
-    color: #ccc;
-    border: 1px solid #ccc;
+.chosen-container .chosen-results li.highlighted {
+    background-color: #004296;
+    color: #ffffff;
 }
 
 .filters .orderBy select, .filters .pageItens select {
