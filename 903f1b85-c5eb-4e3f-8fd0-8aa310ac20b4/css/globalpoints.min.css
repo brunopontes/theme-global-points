@@ -34,6 +34,10 @@ a.button {
     border-radius: 2em;
 }
 
+.site-header .profile .text h2 {
+    color: #ffffff;
+}
+
 aside.sidebar nav {
     background: #f2f2f2;
     border-radius: 5px;
@@ -234,13 +238,13 @@ article.product-description .tabs ul {
     color: #ffffff;
 }
 
-aside.sidebar + article.list-products ul.products li .photo, aside.sidebar + article + article + article.list-products ul.products li .photo, aside.sidebar + article + article.list-products ul.products li .photo, article.list-products ul.products li .photo {
+aside.sidebar + article.list-products ul.products li .photo, aside.sidebar + article + article + article.list-products ul.products li .photo, aside.sidebar + article + article.list-products ul.products li .photo, article.list-products ul.products li .photo, article.list-products ul.products li .photo {
     width: 100%;
     margin: 0;
     max-width: none;
 }
 
-    aside.sidebar + article.list-products ul.products li .photo a, aside.sidebar + article + article + article.list-products ul.products li .photo a, aside.sidebar + article + article.list-products ul.products li .photo a, article.list-products ul.products li .photo a {
+    aside.sidebar + article.list-products ul.products li .photo a, aside.sidebar + article + article + article.list-products ul.products li .photo a, aside.sidebar + article + article.list-products ul.products li .photo a, article.list-products ul.products li .photo a, article.list-products ul.products li .photo a {
         display: block;
     }
 
@@ -252,8 +256,47 @@ aside.sidebar + article.list-products .slider .flex-direction-nav, aside.sidebar
     z-index: -1;
 }
 
-aside.sidebar + article + article + article.list-products .slider ul.products li img, aside.sidebar + article + article.list-products .slider ul.products li img, article.list-products ul.products li img {
+body.home .products .photo {
+    max-width: 251px;
+    height: 258px;
+    max-height: 258px;
+}
+
+    body.home .products .photo a {
+        max-width: 251px;
+        height: 258px;
+        max-height: 258px;
+    }
+
+        body.home .products .photo a img {
+            max-width: 251px;
+            height: 258px;
+            max-height: 258px;
+        }
+
+.products .photo {
+    height: 299px;
+    max-height: 299px;
+}
+
+    .products .photo a {
+        height: 299px;
+        max-height: 299px;
+    }
+
+        .products .photo a img {
+            height: 299px;
+            max-height: 299px;
+        }
+
+.mais-resgatados .popover .photo a img, .mais-vistos .popover .photo a img {
     margin-top: 35px;
+}
+
+select option, .chosen-container .chosen-results li.highlighted {
+    background-color: #ffffff;
+    color: #ccc;
+    border: 1px solid #ccc;
 }
 
 .filters .orderBy select, .filters .pageItens select {
@@ -291,15 +334,13 @@ aside.sidebar + article + article + article.list-products .slider ul.products li
         color: #4a4a4a;
     }
 
-    .breadcrumbs ul li:last-child a {
+    .breadcrumbs ul li:last-child {
         color: #004296;
     }
 
-    .breadcrumbs ul li:before:nth-last-child(1) {
-        color: #004296;
-        background: #004296;
-        background-color: #004296;
-    }
+        .breadcrumbs ul li:last-child a {
+            color: #004296;
+        }
 
 aside.sidebar .price-filter .field input {
     border-radius: 5px;
@@ -363,6 +404,10 @@ table thead th {
     border-radius: 5px;
 }
 
+.pagination ul li {
+    background-color: #004296;
+    color: #ffffff;
+}
 
 footer {
     display: none;
@@ -385,26 +430,25 @@ footer {
         }
 
         #footer_custom_4 .pos-footer .link-caixa {
-            margin-top: 10px;
+            margin-top: 18px;
             border-bottom-style: solid;
             border-bottom-width: 1px;
         }
 
             #footer_custom_4 .pos-footer .link-caixa a {
                 display: block;
-                font-size: 18px;
+                font-size: 25px;
                 padding-left: 1%;
                 color: #004296;
                 font-weight: 700;
-                margin-bottom: 10px;
+                margin-bottom: 25px;
             }
 
         #footer_custom_4 .pos-footer .footer-copyright div {
-            margin-top: 10px;
+            margin-top: 35px;
             margin-bottom: 50px;
             padding: 1%;
-            font-size: 11px;
-            line-height: 15px;
+            font-size: 12px;
         }
 
 
@@ -412,7 +456,6 @@ footer {
     width: 75%;
     margin: auto;
     text-align: center;
-    display: table;
     line-height: 15px;
 }
 
@@ -422,20 +465,19 @@ footer {
 
         .container-footer .pre-footer h1 {
             font-weight: 800;
-            font-size: 22px;
         }
 
         .container-footer .pre-footer div {
             color: #004296;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
         }
 
     .container-footer .section1 h2, .section2 h2, .section3 h2 {
         padding-top: 35px;
         margin: 0;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 18px;
     }
 
 .section1, .section2, .section3 {
