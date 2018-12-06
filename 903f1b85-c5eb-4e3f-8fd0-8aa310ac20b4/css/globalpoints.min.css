@@ -252,10 +252,6 @@ aside.sidebar + article.list-products ul.products li .photo, aside.sidebar + art
             box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 15px 0px;
         }
 
-aside.sidebar + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article + article.list-products .slider .flex-direction-nav, aside.sidebar + article + article + article + article.list-products .slider .flex-direction-nav, .slider .flex-direction-nav {
-    z-index: -1;
-}
-
 body.home .products .photo {
     max-width: 251px;
     height: 258px;
@@ -289,7 +285,7 @@ body.home .products .photo {
             max-height: 299px;
         }
 
-.mais-resgatados .popover .photo a img, .mais-vistos .popover .photo a img {
+.mais-resgatados .popover .photo a img, .mais-vistos .popover .photo a img, .similares .photo a img {
     margin-top: 35px;
 }
 
