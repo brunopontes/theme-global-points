@@ -296,9 +296,12 @@ footer {
 }
 
     #footer_custom_4 .pos-footer {
+        width: 90%;
+        margin: auto;
     }
 
         #footer_custom_4 .pos-footer .footer-contact a {
+            font-size: 14px;
             padding: 1%;
             color: #004296;
         }
@@ -310,33 +313,47 @@ footer {
         }
 
             #footer_custom_4 .pos-footer .link-caixa a {
+                display: block;
                 font-size: 25px;
                 padding-left: 1%;
                 color: #004296;
                 font-weight: 700;
+                margin-bottom: 25px;
             }
+
+        #footer_custom_4 .pos-footer .footer-copyright div {
+            margin-top: 35px;
+            margin-bottom: 50px;
+            padding: 1%;
+            font-size: 12px;
+        }
+
 
 .container-footer {
     width: 90%;
     margin: auto;
     text-align: center;
-    display: inline-block;
 }
 
-    .container-footer .pre-footer h1 {
-        font-weight: 800;
+    .container-footer .pre-footer {
+        margin-top: 40px;
     }
 
-    .container-footer .pre-footer div {
-        color: #004296;
-        font-weight: 600;
-        font-size: 18px;
-    }
+        .container-footer .pre-footer h1 {
+            font-weight: 800;
+        }
+
+        .container-footer .pre-footer div {
+            color: #004296;
+            font-weight: 600;
+            font-size: 16px;
+        }
 
     .container-footer .section1 h2, .section2 h2, .section3 h2 {
         padding-top: 35px;
         margin: 0;
         font-weight: 600;
+        font-size: 18px;
     }
 
 .section1, .section2, .section3 {
@@ -350,6 +367,15 @@ footer {
     color: #f16122;
     font-weight: 600;
     padding-top: 15px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #4a4a4a;
+}
+
+.point-most {
+    color: #ffa500;
 }
 /*************/
 /*Responsives*/
