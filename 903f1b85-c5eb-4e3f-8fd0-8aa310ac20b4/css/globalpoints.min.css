@@ -1,4 +1,4 @@
-﻿.site-header {
+﻿/*.site-header {
     padding: 0;
     margin: 0;
 }
@@ -21,4 +21,200 @@
         align-self: flex-start;
         order: -1;
         background: black;
+    }*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: #004296
+}
+
+button {
+    background: #004B85;
+    border: 0;
+    color: #fff;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+}
+
+a.button {
+    background: #004B85;
+    border: 0;
+    color: #fff;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+}
+
+aside.sidebar nav {
+    background: #f2f2f2;
+}
+
+aside.sidebar .list-buttons ul li a {
+    border: 1px solid #ccc;
+    color: #ccc;
+    -moz-border-radius: .25em;
+    -webkit-border-radius: .25em;
+    border-radius: .25em;
+}
+
+    aside.sidebar .list-buttons ul li a:hover {
+        background: #929292;
+        border: 1px solid #929292;
+        color: #fff;
     }
+
+aside.sidebar .list-buttons ul li.active a {
+    background: #004296;
+    border: 1px solid #004296;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    margin-top: 1.25em;
+}
+
+.site-header {
+    background: linear-gradient(0deg, #004296 80%, #012f6b 50%);
+    padding-top: 35px;
+}
+
+    .site-header .search {
+        display: none;
+    }
+
+    .site-header h1.logo {
+        width: 35%;
+        height: 75px;
+        background: url(../assets/img/logo-duplo.png) no-repeat;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 2em;
+    }
+
+    .site-header .profile {
+        width: 35%;
+        text-align: right;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+        .site-header .profile .text {
+            color: white;
+        }
+
+            .site-header .profile .text p {
+                color: #92d7ff;
+            }
+
+            .site-header .profile .text h2 span .over {
+                background: #f2f2f2;
+                padding-top: 0;
+                text-align: left;
+            }
+
+                .site-header .profile .text h2 span .over ul li a {
+                    color: #4a4a4a;
+                }
+
+                    .site-header .profile .text h2 span .over ul li a:hover {
+                        color: #ffa500;
+                    }
+
+    .site-header .cart-items {
+        width: 20%;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+        .site-header .cart-items > a {
+            color: #92d7ff;
+            background: #012f6b;
+        }
+
+#primary-navigation {
+    float: unset;
+    background: #ffa500;
+}
+
+    #primary-navigation ul li a {
+        color: white;
+    }
+
+    #primary-navigation ul li.icon a {
+        overflow: unset;
+    }
+
+    #primary-navigation ul li:first-child {
+        padding-right: 0;
+        width: 14.2%;
+    }
+
+    #primary-navigation .menu-container {
+        padding-left: 3.04167%;
+        padding-right: 3.04167%;
+    }
+
+    #primary-navigation ul li:first-child:before {
+        display: none;
+    }
+
+article {
+    width: 85%;
+    margin: auto;
+    float: inherit;
+}
+
+    article.list-products ul.products li .photo {
+        margin-right: 0;
+    }
+
+    article.list-products ul.products li {
+        border-style: solid;
+        border-color: #8e8e8e;
+        border-width: 1px;
+        width: inherit;
+    }
+
+        article.list-products ul.products li h2, article.list-products ul.products li p {
+            display: none;
+        }
+
+        article.list-products ul.products li h2, article.list-products ul.products li p {
+            display: none;
+        }
+
+.tabs ul li a {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    background: #004296;
+    color: white;
+    border-radius: .25em;
+}
+
+.tabs ul li.active a:after {
+    border-top-color: #004296;
+}
+
+article.product-description .tabs ul {
+    background: #f2f2f2;
+}
+
+.popOver {
+    display: none;
+}
+/*************/
+/*Responsives*/
+@media only screen and (min-width: 1280px) {
+    #primary-navigation ul li {
+        width: 14.2%;
+    }
+}
