@@ -294,10 +294,15 @@ body.home .products .photo {
     color: #ffffff;
 }
 
-.filters .orderBy select, .filters .pageItens select {
+.chosen-container {
+    display: block;
+}
+
+/*.filters .orderBy select, .filters .pageItens select {
     border-radius: 5px;
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    content: "\e64b";
     appearance: none;
     background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
     background-position: 100% 0;
@@ -305,20 +310,21 @@ body.home .products .photo {
     background-repeat: no-repeat;
 }
 
-    .filters .orderBy select.orderBy:after, .filters .pageItens select:before {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
+.filters #orderBy:after, .filters #orderBy:before {
+    content: "\e64b";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
-    .filters .orderBy select:focus, .filters .pageItens select:focus {
-        background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
-        background-size: 5px 5px, 5px 5px, 3em 3.5em;
-        background-repeat: no-repeat;
-        border-color: grey;
-        outline: 0;
-    }
+.filters .orderBy select:focus, .filters .pageItens select:focus {
+    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-size: 5px 5px, 5px 5px, 3em 3.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+}*/
 
 .breadcrumbs, section#content {
     padding-left: 4%;
@@ -394,6 +400,10 @@ table thead th {
     font-weight: 600;
 }
 
+.cart-products tfoot a.modal {
+    color: #ffa500;
+}
+
 .cart .info {
     background-color: #f2f2f2;
     border-radius: 5px;
@@ -407,6 +417,10 @@ table thead th {
 .steps ul li.active strong {
     background-color: #004296;
     background: #004296;
+}
+
+.steps ul li.active {
+    color: #004296;
 }
 
 .ti-shopping-cart, .site-header .cart-items > a:before, article.cart-empty h2:before {
