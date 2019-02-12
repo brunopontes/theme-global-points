@@ -53,6 +53,10 @@ body {
                 display: grid;
             }
 
+#content > div > article > div:nth-child(2) > div > p {
+    width: 252px;
+}
+
 .menuHeader-mobile {
     display: none;
 }
@@ -1441,6 +1445,11 @@ article.list-products ul.products li p {
 }
 
 @media screen and (min-width: 700px) and (max-width: 989px) {
+    body.login #content .container article.box .panel {
+        width: 650px;
+        height: 400px;
+    }
+
     #Resgatar {
         font-size: 13px;
         margin-top: 20px;
