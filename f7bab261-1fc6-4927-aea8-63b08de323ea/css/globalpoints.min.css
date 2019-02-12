@@ -57,6 +57,10 @@ body {
     width: 252px;
 }
 
+input[type='text'], input[type='password'], input[type='date'], input[type='email'], input[type='tel'], textarea, select {
+    font-family: inherit;
+}
+
 .menuHeader-mobile {
     display: none;
 }
@@ -1297,7 +1301,7 @@ article.product-description .tabs table th, article.product-description .tabs ta
 .product-details .product-info h1, aside.sidebar h2,
 #cart-panel-carrinho > fieldset.shippingCalc > div.cepEntregaContainer > div > ng-transclude > h2,
 #fieldsetEndEntrega > h2, #fieldsetEndEntrega, .product-details .product-info form fieldset h2,
-.order-info h2, .steps ul li {
+.order-info h2, .steps ul li, #content > div > article > form > label {
     color: #494949;
 }
 
@@ -1414,6 +1418,10 @@ article.list-products ul.products li p {
     }
 
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
+    #products-permanent {
+        padding-left: 75px;
+    }
+
     section #content .container {
         width: 1200px;
     }
