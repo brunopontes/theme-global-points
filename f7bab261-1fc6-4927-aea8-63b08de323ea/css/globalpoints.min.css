@@ -148,8 +148,7 @@ body.login article.box .panel a.rememberPassword {
     padding: 0px;
 }
 
-    #primary-navigation #menu > li > a:hover,
-    .site-header .profile .text div p a:hover {
+    #primary-navigation #menu > li > a:hover {
         cursor: pointer;
         border-bottom: 2px solid #f96302;
     }
