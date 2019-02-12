@@ -1284,19 +1284,24 @@ article.product-description .tabs table th, article.product-description .tabs ta
     color: #494949;
 }
 
-.cart-products table tbody tr td .partner, .field span, table tbody tr td span,
+h1, h2, h3, .cart-products table tbody tr td .partner, .field span, table tbody tr td span,
 .cart-products table tfoot tr td p, .cart-products table tfoot tr td table.subtotal tr td,
-.info p, table thead th, aside.sidebar header h1,
+.info p, table thead th, .cart-products h2, aside.sidebar header h1,
 section#content .container .meucarrinho, .produtosmaisvales, article.dashboard .latestCredits table th,
 article.dashboard .yourPoints .balance h2, article.dashboard .yourPoints .balance, article.dashboard .yourPoints .expiration,
-article.dashboard .aboutYou p span, h1, article p, .field label, .tabs .tabContent, .order-info h2, .product-details .product-info form fieldset h2,
-.steps ul li, table tbody tr td {
+article.dashboard .aboutYou p span, h1, article p, .field label, .tabs .tabContent,
+article.product-description .tabs table th, article.product-description .tabs table td,
+.product-details .product-info h1, aside.sidebar h2,
+#cart-panel-carrinho > fieldset.shippingCalc > div.cepEntregaContainer > div > ng-transclude > h2,
+#fieldsetEndEntrega > h2, #fieldsetEndEntrega, .product-details .product-info form fieldset h2,
+.order-info h2, .steps ul li {
     color: #494949;
 }
 
-h1, .product-details .product-info h1, .cart-products h2 {
-    color: #274b7a;
-}
+    h1, .product-details .product-info h1, .cart-products h2, #cart-panel-carrinho > fieldset.cart-products.ng-scope > table > tbody > tr > td:nth-child(3) > a,
+    #cadastrarNovoEndereco > a, #fieldsetEndEntrega > a {
+        color: #274b7a;
+    }
 
 #content > div.container > aside > a.back {
     font-size: 26px;

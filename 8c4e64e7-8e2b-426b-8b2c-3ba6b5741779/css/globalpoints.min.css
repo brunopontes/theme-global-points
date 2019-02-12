@@ -15,6 +15,10 @@ section#content {
     padding: 0;
 }
 
+#content > div > article > div:nth-child(2) > div > p {
+    width: 252px;
+}
+
 .site-header .saldoParticipante {
     float: left;
     padding: 10px;
@@ -103,7 +107,7 @@ body.login #content .container {
     font-family: helvetica;
 }
 
-/****************Estiliza��o login and password******************/
+/****************Estiliza??o login and password******************/
 
 body.login article.box h1 {
     font-size: 25px;
