@@ -1,0 +1,8 @@
+//Label do login na página de entrada
+.field;#btnEntrar;Acesso
+
+//Palavra "Pontuação" o filtro da sidebar
+.price-filter;h2;Valores
+
+//Palavra "Sair" do Login
+.profile;ul li:nth-child(2) a;Sair
