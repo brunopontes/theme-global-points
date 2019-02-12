@@ -177,9 +177,9 @@ article {
     }
 
     article.list-products ul.products li {
-        border-style: solid;
+        /*border-style: solid;
         border-color: #bfbebe;
-        border-width: 1px;
+        border-width: 1px;*/
         width: inherit;
     }
 
@@ -187,9 +187,17 @@ article {
             display: none;
         }
 
-        article.list-products ul.products li h2, article.list-products ul.products li p {
-            display: none;
-        }
+.mais-resgatados .popover .photo a img, .mais-vistos .popover .photo a img, .similares .photo a img {
+    margin-top: 15px !important;
+}
+
+article.product-description .tabs table tr:nth-child(even) th, article.product-description .tabs table tr:nth-child(even) td {
+    color: white;
+}
+
+aside.sidebar a.back {
+    white-space: nowrap;
+}
 
 .tabs ul li a {
     border: 1px solid #ccc;
@@ -283,6 +291,10 @@ body.home .products .photo {
         .products .photo a img {
             height: 299px;
             max-height: 299px;
+            border-style: solid;
+            border-color: #bfbebe;
+            border-width: 1px;
+            width: 100%;
         }
 
 .mais-resgatados .popover .photo a img, .mais-vistos .popover .photo a img, .similares .photo a img {
@@ -375,13 +387,33 @@ body.home article.list-products header {
     }
 
     body.home article.list-products header:after {
-        content: "CONFIRA OS PARCEIROS PARTICIPANTES";
+        content: "CONFIRA TODAS AS OPÇÕES DE PARCEIROS E PRESENTES QUE VOCÊ PODE ESCOLHER!";
         color: #004296;
-        font-size: 1.875em;
+        font-size: 1.400em;
         line-height: 1.2em;
-        font-weight: normal;
+        font-weight: 700;
         margin-left: -50px;
     }
+
+#primary-navigation ul li:hover + #primary-navigation ul li ul {
+    display: none !important;
+}
+
+#pPreco {
+    display: none;
+}
+
+.site-header .profile .text h2 span .over ul li:first-child {
+    display: none;
+}
+
+#li-senha {
+    display: none;
+}
+
+#li-enderecos {
+    display: none;
+}
 
 article.list-products header h1 {
     text-transform: uppercase;
@@ -423,9 +455,9 @@ table thead th {
     color: #004296;
 }
 
-.ti-shopping-cart, .site-header .cart-items > a:before, article.cart-empty h2:before {
+/*.ti-shopping-cart, .site-header .cart-items > a:before, article.cart-empty h2:before {
     content: "\e6a0";
-}
+}*/
 
 .cart-products table tbody tr td:last-child p strong {
     color: #004296;
