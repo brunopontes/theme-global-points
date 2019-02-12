@@ -1302,7 +1302,7 @@ article.product-description .tabs table th, article.product-description .tabs ta
 }
 
     h1, .product-details .product-info h1, .cart-products h2, #cart-panel-carrinho > fieldset.cart-products.ng-scope > table > tbody > tr > td:nth-child(3) > a,
-    #cadastrarNovoEndereco > a, #fieldsetEndEntrega > a {
+    #cadastrarNovoEndereco > a, #fieldsetEndEntrega > a, table tbody tr td, aside.sidebar .list-cart-total {
         color: #274b7a;
     }
 
