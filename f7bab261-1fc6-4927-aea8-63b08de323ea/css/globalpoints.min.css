@@ -1298,9 +1298,10 @@ article.product-description .tabs table th, article.product-description .tabs ta
     color: #494949;
 }
 
-h1, .product-details .product-info h1, .cart-products h2, #cart-panel-carrinho > fieldset.cart-products.ng-scope > table > tbody > tr > td:nth-child(3) > a {
-    color: #274b7a;
-}
+    h1, .product-details .product-info h1, .cart-products h2, #cart-panel-carrinho > fieldset.cart-products.ng-scope > table > tbody > tr > td:nth-child(3) > a,
+    #cadastrarNovoEndereco > a, #fieldsetEndEntrega > a {
+        color: #274b7a;
+    }
 
 #content > div.container > aside > a.back {
     font-size: 26px;
